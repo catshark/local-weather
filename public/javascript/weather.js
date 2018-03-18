@@ -74,6 +74,7 @@ function getCurrentCityAndCountry() {
 
 }
 
+// TODO: Separation of concerns below
 function requestData(city, country) {
     var request = new XMLHttpRequest();
     requestUrl = '//api.openweathermap.org/data/2.5/weather?q=' + city + ',' + country + '&units=metric&APPID=de25e34668f7af16171fa16705c66088';
@@ -112,6 +113,7 @@ function requestData(city, country) {
     request.send();
 }
 
+// TODO: SOC
 function switchDegrees() {
     var temp = document.querySelector("p.temperature");
     if (this.textContent === "C") {
